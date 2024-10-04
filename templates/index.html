@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Size Comparison</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 2em;
+        }
+        .form-container {
+            max-width: 500px;
+            margin: auto;
+        }
+        .form-group {
+            margin-bottom: 1em;
+        }
+        label {
+            display: block;
+            margin-bottom: 0.5em;
+        }
+        input[type="text"], input[type="number"] {
+            width: 100%;
+            padding: 0.5em;
+            margin-top: 0.2em;
+        }
+        button {
+            padding: 0.7em;
+            background-color: #007bff;
+            color: white;
+            border: none;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Side by Side Size Comparison</h2>
+        <form action="/compare" method="post">
+            <div class="form-group">
+                <label for="image1_url">Image 1 URL:</label>
+                <input type="text" id="image1_url" name="image1_url" required>
+            </div>
+            <div class="form-group">
+                <label for="height1">Image 1 Height (mm):</label>
+                <input type="number" id="height1" name="height1" required>
+            </div>
+            <div class="form-group">
+                <label for="image2_url">Image 2 URL:</label>
+                <input type="text" id="image2_url" name="image2_url" required>
+            </div>
+            <div class="form-group">
+                <label for="height2">Image 2 Height (mm):</label>
+                <input type="number" id="height2" name="height2" required>
+            </div>
+            <button type="submit">Compare Sizes</button>
+        </form>
+    </div>
+</body>
+</html>
